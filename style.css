@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Red-Hat;
+    src: url(./RedHatDisplay-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Red-Hat;
+}
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background: var(--Pale-blue);
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    height: 50vh;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Light-gray);
+}
+
+.card {
+    max-width: 400px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: -45%;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-txt {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.card-txt h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card-txt p {
+    font-size: 1.5rem;
+    padding: 20px 20px;
+    width: 92%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card .plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: var(--Very-pale-blue);
+    margin: 10px 0px;
+}
+
+.plan .annual-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.annual-price h5 {
+    font-size: 1.4rem;
+}
+
+.annual-price p {
+    font-size: 1.3rem;
+    padding-top: 2px;
+}
+
+.plan a {
+    font-size: 1.3rem;
+    color: blue;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.plan a:hover {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.card .proceed {
+    width: 75%;
+    padding: 13px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: var(--Bright-blue);
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.card .proceed:hover {
+    cursor: pointer;
+    background-color: hsl(245, 70%, 57%);
+}
+
+.card .cancel {
+    font-size: 1.7rem;
+    color: hsl(0, 0%, 32%);
+    transition: all 0.1s ease;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.card .cancel:hover {
+    cursor: pointer;
+    color: hsl(240, 1%, 15%);
+}
+
+@media(max-width: 376px) {
+    .card {
+        width: 340px;
+        margin-top: -165%;
+    }
+}
